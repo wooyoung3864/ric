@@ -1,4 +1,4 @@
-package term3;
+package ric;
 
 public class FizzBuzz {
     public static void main(String[] args) {
@@ -20,6 +20,7 @@ public class FizzBuzz {
             if(val.equals("")) {
                 val = i.toString();
             }
+
             System.out.println(val);
         }
     }

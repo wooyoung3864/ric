@@ -1,4 +1,4 @@
-package term3;
+package ric;
 import java.util.Scanner;
 public class Nice {
     public static final Scanner in = new Scanner(System.in);

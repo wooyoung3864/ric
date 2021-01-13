@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+      <module fileurl="file://$PROJECT_DIR$/AP CSA Term 3/AP CSA Term 3.iml" filepath="$PROJECT_DIR$/AP CSA Term 3/AP CSA Term 3.iml" />
       <module fileurl="file://$PROJECT_DIR$/ric.iml" filepath="$PROJECT_DIR$/ric.iml" />
     </modules>
   </component>
