@@ -1,4 +1,6 @@
-public class BellWork3
+package bellwork;
+
+public class BellWork3Copy
 {
     public static void main(String[]args)
     {
