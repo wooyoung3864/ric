@@ -1,0 +1,54 @@
+Truth Table
+
+I. Conditional AND (&&) Operator
+	ex: if(gpa >= 3.5 && playsSports == true) {
+			S.O.P("Is a Scholar Athlete);
+		} 
+	
+	expression 1		expression 2		exp1 & exp2
+		F					F					F
+		F					T					F
+		T					F					F
+		T					T					T
+		
+II. Conditional OR (||) Operator
+	 ex: if((SemAvg >= 40) || (finalExam) >= 90)) {
+			 S.O.P("Student grade is A");
+		 }
+	
+	expression 1		expression 2		exp1 & exp2
+		F					F					F
+		F					T					T
+		T					F					T
+		T					T					T
+		
+III. Exclusive OR (^) Operator
+	  *Is true if and only if one of its operands is true and the other false
+	  
+	  expression 1		expression 2		exp1 & exp2
+		F					F					F
+		F					T					T
+		T					F					T
+		T					T					F
+		
+IV. Logical Negation (!) Operator
+	 ex: if(password != sentinelValue) {
+	 	S.O.P("Try again dumbass!");
+	 	 } 
+					OR
+		if(!(password == sentinelValue)) {
+	 	S.O.P("Try again dumbass!");
+	 	 } 
+	 	 
+	 	expression 1		expression 2
+	 		F					T
+	 		T					F
+
+V. DeMorgan's Law 
+	* express logical expressions in different ways (usually to make it convenient for us)
+	 ex: !(condition1 && condition2)
+	 		is same as 
+	 	 (!condition1 || !condition2)
+	 	 	and can be re-expressed as 
+	 	 (!condition1 && !condition2)
+	
