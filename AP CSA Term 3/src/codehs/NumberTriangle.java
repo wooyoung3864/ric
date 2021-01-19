@@ -6,6 +6,7 @@ public class NumberTriangle
     {
         // Call makeNumberTriangle
         makeNumberTriangle();
+        makeReversedNumberTriangleWithStars();
     }
 
     // Makes an upright triangle with the numbers 1-5
@@ -19,6 +20,16 @@ public class NumberTriangle
             }
             for(int k = 1; k <= i; ++k) {
                 System.out.print(k + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void makeReversedNumberTriangleWithStars() {
+        int size = 10;
+        for(int i = size; i >= 1; --i) {
+            for(int j = i; j >= 1; --j) {
+                System.out.print("* ");
             }
             System.out.println();
         }
