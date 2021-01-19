@@ -1,6 +1,6 @@
 package classwork;
 import java.util.Scanner;
-public class LoopsQuiz {
+public class LoopsQ {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
         System.out.println("Enter a number: ");
