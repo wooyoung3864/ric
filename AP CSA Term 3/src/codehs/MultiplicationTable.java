@@ -5,17 +5,31 @@ public class MultiplicationTable
     public static void main(String[] args)
     {
         // Call makeMultiplicationTable
-        makeMultiplicationTable();
+        //makeMultiplicationTable();
+        makeMultiplicationTableArray();
     }
 
-    // Makes a multiplcation table
+    // Makes a multiplication table
     public static void makeMultiplicationTable()
     {
-        int num = 10;
+        int num = 20;
         for(int i = 1; i <= num; ++i) {
             for(int j = 1; j <= num; ++j) {
                 int product = i * j;
                 System.out.print(product + "\t");
+            }
+            System.out.println();
+        }
+    }
+
+    public static void makeMultiplicationTableArray() {
+        int num = 20;
+        int[][] table = new int[num][num];
+        for(int i = 1; i <= num; ++i) {
+            for(int j = 1; j <= num; ++j) {
+                int product = i * j;
+                table[i-1][j-1] = product;
+                System.out.print(table[i-1][j-1] + "\t");
             }
             System.out.println();
         }

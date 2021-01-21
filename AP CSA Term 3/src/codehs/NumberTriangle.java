@@ -5,12 +5,12 @@ public class NumberTriangle
     public static void main(String[] args)
     {
         // Call makeNumberTriangle
-        makeNumberTriangle();
+        makeNumberTriangleWithNumbers();
         makeReversedNumberTriangleWithStars();
     }
 
     // Makes an upright triangle with the numbers 1-5
-    public static void makeNumberTriangle()
+    public static void makeNumberTriangleWithNumbers()
     {
         // Your code goes here!
         int treeSize = 5;
