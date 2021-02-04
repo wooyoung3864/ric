@@ -7,7 +7,7 @@ public class Pet {
     private int age;
     private double weight;
     private String type;
-    private static int numInstances;
+    private static int numInstances = 0;
 
     public Pet() {
         name = "Tory";
@@ -62,6 +62,10 @@ public class Pet {
     }
 
     public String toString() {
-        return "Name: " + name + "\nAge: " + age + "\nWeight: " + weight + "\nType: " + type + "\nNumber of pets on record: " + numInstances;
+        return "Name: " + name
+                + "\nAge: " + age
+                + "\nWeight: " + weight
+                + "\nType: " + type
+                + "\nNumber of pets on record: " + numInstances;
     }
 }

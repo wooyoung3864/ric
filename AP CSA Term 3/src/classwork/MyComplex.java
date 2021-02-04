@@ -3,93 +3,88 @@ package classwork;
 public class MyComplex {
     private double real;
     private double img;
-    private String complex;
 
-    public MyComplex() {
+    public MyComplex(){
         real = 0;
         img = 0;
-        complex = (int) real + " + " + (int) img + "i";
     }
 
-    public MyComplex(double a, double b) {
-        real = a;
-        img = b;
-        if(b < 0) {
-            complex = (int) real + " - " + (int) img + "i";
-        } else {
-            complex = (int) real + " + " + (int) img + "i";
-        }
-    }
-
-    public double getReal() {
-        return real;
-    }
-
-    public void setReal(double real) {
+    public MyComplex(double real, double img){
         this.real = real;
-    }
-
-    public double getImg() {
-        return img;
-    }
-
-    public void setImg(double img) {
         this.img = img;
     }
 
-    public void add(MyComplex c) {
-        this.complex = (int) (this.real + c.real) + " + " + (int) (this.img + c.img) + "i";
+    public double getImg(){
+        return img;
     }
 
-    public void multiply(MyComplex c) {
-        this.complex = (int) ((this.real * c.real) - (this.img * c.img)) + " + " + (int) ((this.real * c.img) + (this.img * c.real)) + "i";
+    public void setImg(double img){
+        this.img = img;
     }
 
-    public void conjugate() {
-        String conjugate = "";
-        if(img > 0) {
-            conjugate =  (int) real + " - " + (int) img + "i";
-        } else {
-            conjugate = (int) real + " + " + (int) img + "i";
-         }
-        System.out.println(conjugate);
+    public double getReal(){
+        return real;
     }
 
-    public double argument() {
+    public void setReal(double real){
+        this.real = real;
+    }
+
+    public String isReal(){
+        if(img == 0 && real == 0) {
+            return "Complex";
+        }
+        else if(img == 0 && real != 0) {
+            return "Real";
+        }
+        else if(real == 0 && img != 0) {
+            return "Imaginary";
+        }
+        else {
+            return "Neither";
+        }
+    }
+
+    public void add(MyComplex c){
+        real += c.real;
+        img += c.img;
+    }
+
+    public void multiply(MyComplex c){
+        real = real*c.real + img*c.img;
+        img = real*c.img + img*c.real;
+    }
+
+    public void conjugate(){
+        img *= -1;
+    }
+
+    public double argument(){
         return Math.atan2(real, img);
     }
 
-    public double magnitude() {
-        return Math.sqrt((real * real) + (img * img));
+    public double magnitude(){
+        return Math.sqrt(real*real+img*img);
     }
 
-    public static MyComplex addNew(MyComplex a, MyComplex b) {
-        a.complex = (int) (a.real + b.real) + " + " + (int) (a.img + b.img) + "i";
+    public static MyComplex addNew(MyComplex a, MyComplex b){
+        a.add(b);
         return a;
     }
 
-    public static MyComplex multiplyNew(MyComplex a, MyComplex b) {
-        a.complex = (int) ((a.real * b.real) - (a.img * b.img)) + " + " + (int) ((a.real * b.img) + (a.img * b.real)) + "i";
+    public static MyComplex multiplyNew(MyComplex a, MyComplex b){
+        a.multiply(b);
         return a;
     }
 
-    public String toString() {
-        if(img < 0) {
-            return (int) real + " - " + (int) img + "i";
-        }
-        return (int) real + " + " + (int) img + "i";
+    public String toString(){
+        String a = " + ";
+        if(img < 0) a = " - ";
+        return real + a + Math.abs(img) + "i";
     }
 
     public static void main(String[] args) {
-        MyComplex ricsNumber = new MyComplex(420, 69);
-        MyComplex obama = new MyComplex(69, -69);
+        MyComplex ricsNumber = new MyComplex(696, 420);
         System.out.println(ricsNumber);
-        ricsNumber.add(obama);
-        System.out.println(ricsNumber);
-        ricsNumber.conjugate();
-        ricsNumber.multiply(obama);
-        System.out.println(ricsNumber);
-        System.out.println(ricsNumber.argument());
-        System.out.println(ricsNumber.magnitude());
     }
 }
