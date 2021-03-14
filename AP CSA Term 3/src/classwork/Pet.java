@@ -65,7 +65,7 @@ public class Pet {
         return "Name: " + name
                 + "\nAge: " + age
                 + "\nWeight: " + weight
-                + "\nType: " + type
-                + "\nNumber of pets on record: " + numInstances;
+                + "\nType: " + type;
+                //+ "\nNumber of pets on record: " + numInstances;
     }
 }

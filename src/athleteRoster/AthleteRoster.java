@@ -4,6 +4,7 @@ public class AthleteRoster
 {
     public static void main(String[] args)
     {
+
         Offense ric = new Offense("Ric", "Running back", 26, "Dalton Pigeons", "5'8", 72, 74, 73, 75);
         System.out.println(ric);
         System.out.println();
@@ -55,6 +56,11 @@ public class AthleteRoster
         Forward matt = new Forward("Matt Wuhu", "Power forward", 22, "Curious George and the MFN Squad", "7'4", 100,100,100,100);
         System.out.println(matt);
         System.out.println();
-        
+
+        BasketballPlayer ricc = new BasketballPlayer("Ric", "Small forward", 15, "CDS Pigeons", "5'9", 69, 74);
+        System.out.println(ricc + "\n");
+
+        Forward kev = new Forward("Kevin Lee", "Center", 13, "Brooklyn Nets", "6'1", 64, 69, 72, 74);
+        System.out.println(kev + "\n");
     }    
 }
